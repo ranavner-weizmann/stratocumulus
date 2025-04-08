@@ -30,6 +30,11 @@ def copy_images_without_black_pixels(input_folder, output_folder):
     print(f"Copied {copied_count} images to {output_folder}")
 
 if __name__ == "__main__":
-    input_folder = "target_images"  # Change this to your input folder
-    output_folder = "black_images_removed"  # Change this to your output folder
+    # making sure the output folder exists and creating it if not:
+    if not os.path.exists("../data/black_images_removed"):
+        os.makedirs("../data/black_images_removed")
+    input_folder = "../data/target_images"  # Change this to your input folder
+    output_folder = "../data/black_images_removed"  # Change this to your output folder
     copy_images_without_black_pixels(input_folder, output_folder)
+    print(os.listdir('../data'))
+    print(os.getcwd())
