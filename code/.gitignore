@@ -1,2 +1,5 @@
 # Ignore virtual environment
 venv/
+
+# Ignore the folder with images removed
+data/black_images_removed/
